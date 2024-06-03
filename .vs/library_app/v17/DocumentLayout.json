@@ -1,0 +1,111 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Admin\\Documents\\DSA_Final project\\library_app\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EB61658B-9FBE-43AD-A073-8776F471B43E}|library_app\\library_app.vcxproj|C:\\Users\\Admin\\Documents\\DSA_Final project\\library_app\\library_app\\Library.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{EB61658B-9FBE-43AD-A073-8776F471B43E}|library_app\\library_app.vcxproj|solutionrelative:library_app\\Library.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB61658B-9FBE-43AD-A073-8776F471B43E}|library_app\\library_app.vcxproj|C:\\Users\\Admin\\Documents\\DSA_Final project\\library_app\\library_app\\library_app.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{EB61658B-9FBE-43AD-A073-8776F471B43E}|library_app\\library_app.vcxproj|solutionrelative:library_app\\library_app.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB61658B-9FBE-43AD-A073-8776F471B43E}|library_app\\library_app.vcxproj|C:\\Users\\Admin\\Documents\\DSA_Final project\\library_app\\library_app\\Library.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{EB61658B-9FBE-43AD-A073-8776F471B43E}|library_app\\library_app.vcxproj|solutionrelative:library_app\\Library.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB61658B-9FBE-43AD-A073-8776F471B43E}|library_app\\library_app.vcxproj|C:\\Users\\Admin\\Documents\\DSA_Final project\\library_app\\library_app\\Book.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{EB61658B-9FBE-43AD-A073-8776F471B43E}|library_app\\library_app.vcxproj|solutionrelative:library_app\\Book.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB61658B-9FBE-43AD-A073-8776F471B43E}|library_app\\library_app.vcxproj|C:\\Users\\Admin\\Documents\\DSA_Final project\\library_app\\library_app\\Book.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{EB61658B-9FBE-43AD-A073-8776F471B43E}|library_app\\library_app.vcxproj|solutionrelative:library_app\\Book.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 231,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Book.cpp",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\DSA_Final project\\library_app\\library_app\\Book.cpp",
+              "RelativeDocumentMoniker": "library_app\\Book.cpp",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\DSA_Final project\\library_app\\library_app\\Book.cpp",
+              "RelativeToolTip": "library_app\\Book.cpp",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAgwA4AAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-02T09:00:29.974Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "library_app.cpp",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\DSA_Final project\\library_app\\library_app\\library_app.cpp",
+              "RelativeDocumentMoniker": "library_app\\library_app.cpp",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\DSA_Final project\\library_app\\library_app\\library_app.cpp",
+              "RelativeToolTip": "library_app\\library_app.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-02T08:55:48.254Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Library.cpp",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\DSA_Final project\\library_app\\library_app\\Library.cpp",
+              "RelativeDocumentMoniker": "library_app\\Library.cpp",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\DSA_Final project\\library_app\\library_app\\Library.cpp",
+              "RelativeToolTip": "library_app\\Library.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-03T07:11:11.771Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 169,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Library.h",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\DSA_Final project\\library_app\\library_app\\Library.h",
+              "RelativeDocumentMoniker": "library_app\\Library.h",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\DSA_Final project\\library_app\\library_app\\Library.h",
+              "RelativeToolTip": "library_app\\Library.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-03T01:48:39.677Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Book.h",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\DSA_Final project\\library_app\\library_app\\Book.h",
+              "RelativeDocumentMoniker": "library_app\\Book.h",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\DSA_Final project\\library_app\\library_app\\Book.h",
+              "RelativeToolTip": "library_app\\Book.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-02T08:58:33.581Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
