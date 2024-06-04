@@ -7,9 +7,14 @@ using namespace std;
 
 Library myLibrary;
 void option1Addbook();
+void option3DeleteBook();
+void option4ViewBookDetail();
 
 int main()
 {
+    Book book1(11, "Gone", "Malcom", "Penguin", 190);
+    myLibrary.addNewBook(book1);
+
     bool running = true;
 
     while (running) {
@@ -34,8 +39,18 @@ int main()
             running = false;
             break;
         case 1:
-            // write a function for this case
             option1Addbook();
+            break;
+        case 2:
+            break;
+        case 3:
+            option3DeleteBook();
+            break;
+        case 4:
+
+            break;
+        case 5: 
+            myLibrary.viewAllBooks();
             break;
         default:
             cout << "Invalid option. Please try again.";
@@ -43,7 +58,7 @@ int main()
         }
     }
 
-    Book book1(11,"Gone","Malcom", "Penguin", 190);
+    
     Book book2(99, "Gone", "Malcom", "Penguin", 190);
     Book book3(111, "Gone", "Malcom", "Penguin", 190);
     Book book4(99, "Hello", "Malcom Gladwell", "Penguin", 190);
@@ -51,7 +66,7 @@ int main()
     Book bookList[100] = {};
 
     
-    myLibrary.addNewBook(book1);
+    
     myLibrary.addNewBook(book3);
     myLibrary.addNewBook(book2);
     //myLibrary.viewAllBooks();
@@ -60,6 +75,33 @@ int main()
     myLibrary.viewAllBooks();
     
     return 0;
+}
+
+int validateInputBookID(bool option1 = false) {
+    int bookId;
+    bool idExists = false;
+    do
+    {
+        cout << "Book ID: ";
+        cin >> bookId;
+        if (myLibrary.idExist(bookId))
+        {
+            if (option1)
+            {
+                cout << "This ID is not available. Please try another ID." << endl;
+            }
+            else
+            {
+                cout << "Invalid book ID. Please try again." << endl;
+            }
+            idExists = true;
+        }
+        else
+        {
+            idExists = false;
+        }
+    } while (idExists);
+    return bookId;
 }
 
 void option1Addbook() {
@@ -85,5 +127,68 @@ void option1Addbook() {
         }
     } while (idExists);
 
+    cout << "Book title: ";
+    cin.ignore();
+    getline(cin, title);
+
+    cout << "Author(s): ";
+    getline(cin, author);
+
+    cout << "Publisher: ";
+    getline(cin, publisher);
+
+    cout << "Number of pages: ";
+    cin >> noOfPages;
+    cin.ignore();
+
+    Book newBook(bookId, title, author, publisher, noOfPages);
+    int result = myLibrary.addNewBook(newBook);
+    if (result == 1)
+    {
+        cout << "New book added successfully!" << endl;
+    }
+    else
+    {
+        cout << "Failed to add new book!" << endl;
+    }
+    cout << endl;
+}
+
+void option3DeleteBook() {
+    int bookId;
+    myLibrary.viewAllBooksShort();
+    cout << "Enter the ID of the book you want to delete." << endl;
+
+    bool idExists = false;
+    do
+    {
+        cout << "Book ID: ";
+        cin >> bookId;
+        if (myLibrary.idExist(bookId) == false)
+        {
+            cout << "Invalid book ID. Please try again." << endl;
+        }
+        else
+        {
+            idExists = true;
+        }
+    } while (!idExists);
+
+    int result = myLibrary.deleteABook(bookId);
+    if (result == 1)
+    {
+        cout << "Book deleted successfully!" << endl;
+    }
+    else
+    {
+        cout << "Failed to delete book!" << endl;
+    }
+    cout << endl;
+}
+
+void option4ViewBookDetail() {
+    myLibrary.viewAllBooksShort();
+    cout << "Enter the ID of the book you want to see in detail." << endl;
+    cout << "Book ID: ";
 
 }
