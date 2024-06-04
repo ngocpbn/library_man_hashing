@@ -18,10 +18,17 @@ public:
 
 	// Takes book ID as key and return its index in the libray hash table
 	int hashFunc(int bookId);	
-	void addNewBook(Book book);
+	int addNewBook(Book book);
 	void viewBookDetail(int bookId);
 	void viewAllBooks();
-	void findBookPosition(int bookId);
+	void viewAllBooksShort();
+	int findBookIndex(int bookId);
+	int editABook(int index,Book book);
+	int deleteABook(int bookId);
+	bool idExist(int id);
+	/// <summary>
+	/// maybe add sort too? no. nobody sorts hash table :)
+	/// </summary>
 
 	~Library();
 };

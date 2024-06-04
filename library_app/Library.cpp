@@ -14,7 +14,27 @@ int Library::hashFunc(int bookId) {
 	return bookId % LIBRARY_SIZE;
 }
 
-void Library::addNewBook(Book book) {
+int Library::findBookIndex(int bookId) {
+	int index, hashKey = hashFunc(bookId);
+
+	for (int i = 0; i < LIBRARY_SIZE; i++)
+	{
+		index = hashFunc(hashKey + i);
+		if (library[index].getId() == bookId)
+		{
+			return index;
+		}
+		else if (library[index].getId() == -1)
+		{
+			return -1;
+		}
+	
+	}
+
+	return -1;
+}
+
+int Library::addNewBook(Book book) {
 	int index, hashKey;
 	hashKey = hashFunc(book.getId());
 
@@ -25,9 +45,26 @@ void Library::addNewBook(Book book) {
 		if (library[index].getId() == -1)
 		{
 			library[index] = book;
-			return;
+			return 1;
 		}
 	}
+	return -1; // failed to insert book
+}
+
+void Library::viewBookDetail(int bookId) {
+	int index = findBookIndex(bookId);
+	if (index == -1)
+	{
+		cout << "No book in library has ID " << bookId << ". Please try again." << endl;
+		return;
+	}
+	Book book = library[index];
+	cout << "Index		BookID			Title			Author			Publisher		Number of pages" << endl;
+	string title = book.getTitle();
+	string author = book.getAuthor();
+	string publisher = book.getPublisher();
+	int noOfPages = book.getNoOfPages();
+	cout << index << "		" << bookId << "			" << title << "			" << author << "			" << publisher << "			" << noOfPages << endl;
 }
 
 void Library::viewAllBooks() {
@@ -43,6 +80,45 @@ void Library::viewAllBooks() {
 			cout << i<<"		"<< bookId <<"			"<< title<<"			"<< author <<"			"<< publisher <<"			"<< noOfPages << endl;
 		}
 	}
+}
+
+void Library::viewAllBooksShort() {
+	cout << "BookID			Title" << endl;
+	for (int i = 0; i < LIBRARY_SIZE; i++)
+	{
+		if (library[i].getId() != -1) {
+			int bookId = library[i].getId();
+			string title = library[i].getTitle();
+			cout << bookId << "			" << title << endl;
+		}
+	}
+}
+
+int Library::editABook(int index,Book book) {
+	library[index] = book;
+	return 1; // edit book successfully
+}
+
+int Library::deleteABook(int bookId) {
+	int index = findBookIndex(bookId);
+	if (index == -1)
+	{
+		cout << "No book in library has ID " << bookId << ". Please try again." << endl;
+		return -1;
+	}
+	Book book(-1, "", "", "", -1);
+	library[index] = book;
+	return 1;	// delete book sucessfully
+}
+
+bool Library::idExist(int id) {
+	for (int i = 0; i < LIBRARY_SIZE; i++)
+	{
+		if (library[i].getId() == id) {
+			return true;
+		}
+	}
+	return false;
 }
 
 Library::~Library() {
