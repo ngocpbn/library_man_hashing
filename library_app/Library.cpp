@@ -1,5 +1,6 @@
 #include "Library.h"
 #include <iostream>
+#include <iomanip>
 #include <string>
 
 Library::Library() {
@@ -59,16 +60,40 @@ void Library::viewBookDetail(int bookId) {
 		return;
 	}
 	Book book = library[index];
-	cout << "Index		BookID			Title			Author			Publisher		Number of pages" << endl;
+
+	cout << left << setw(8) << "Index"
+		<< setw(8) << "BookID"
+		<< setw(25) << "Title"
+		<< setw(25) << "Author"
+		<< setw(20) << "Publisher"
+		<< setw(15) << "Number of pages"
+		<< endl;
+
 	string title = book.getTitle();
 	string author = book.getAuthor();
 	string publisher = book.getPublisher();
 	int noOfPages = book.getNoOfPages();
-	cout << index << "		" << bookId << "			" << title << "			" << author << "			" << publisher << "			" << noOfPages << endl;
+	
+	cout << left << setw(8) << index
+		<< setw(8) << bookId
+		<< setw(25) << title
+		<< setw(25) << author
+		<< setw(20) << publisher
+		<< setw(15) << noOfPages
+		<< endl;
+
 }
 
 void Library::viewAllBooks() {
-	cout << "Index		BookID			Title			Author			Publisher		Number of pages" << endl;
+	
+	cout << left << setw(8) << "Index"
+		<< setw(8) << "BookID"
+		<< setw(25) << "Title"
+		<< setw(25) << "Author"
+		<< setw(20) << "Publisher"
+		<< setw(15) << "Number of pages"
+		<< endl;
+	
 	for (int i = 0; i < LIBRARY_SIZE; i++)
 	{
 		if (library[i].getId() != -1) {
@@ -77,7 +102,14 @@ void Library::viewAllBooks() {
 			string author = library[i].getAuthor();
 			string publisher = library[i].getPublisher();
 			int noOfPages = library[i].getNoOfPages();	
-			cout << i<<"		"<< bookId <<"			"<< title<<"			"<< author <<"			"<< publisher <<"			"<< noOfPages << endl;
+
+			cout << left << setw(8) << i
+				<< setw(8) << bookId
+				<< setw(25) << title
+				<< setw(25) << author
+				<< setw(20) << publisher
+				<< setw(15) << noOfPages
+				<< endl;
 		}
 	}
 }
